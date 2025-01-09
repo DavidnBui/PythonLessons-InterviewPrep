@@ -1,14 +1,14 @@
-class Node:
+class Node:                        # Building block for LinkedList
     def __init__(self, value):
         self.value = value
         self.next = None
 
 class LinkedList:
     def __init__(self, value):
-        new_node = Node(value) 
-        self.head = new_node
-        self.tail = new_node
-        self.length = 1
+        new_node = Node(value)      # Creates Node 
+        self.head = new_node        # Sets node as head 
+        self.tail = new_node        # Sets node as tail
+        self.length = 1             # Update length of node 
     
     def print_list(self):
         temp = self.head
@@ -16,7 +16,7 @@ class LinkedList:
             print(temp.value)
             temp = temp.next
 
-    def append(self, value):
+    def append(self, value):           # Adds a node to the end of the list
         new_node = Node(value) 
         if self.head is None: 
             self.head = new_node
@@ -26,7 +26,7 @@ class LinkedList:
             self.tail = new_node       # Sets the new note as the tail
         self.length += 1
 
-    def pop(self):
+    def pop(self):                      # Removes last node on the list 
         if self.length == 0:
             return None
         temp = self.head
@@ -42,7 +42,7 @@ class LinkedList:
             self.tail = None
         return temp
 
-    def prepend(self, value):
+    def prepend(self, value):           # Adds a node to the begining of the list
         new_node = Node(value)          
         if self.length == 0:
             self.head = new_node        
@@ -53,7 +53,7 @@ class LinkedList:
         self.length += 1
         return True
 
-    def pop_first(self):
+    def pop_first(self):                # Removes first node from the lsit 
         if self.length == 0:
             return None
         temp = self.head                # Creates temporary Node 
@@ -71,6 +71,14 @@ class LinkedList:
         for _ in range (index):         # Iterate however many times to reach index
             temp = temp.next            # Move temp along the list 
         return temp
+
+    def set_value (self, index, value): # Goes to index of node and changes its value 
+        temp = self.get(index)          # calls back to get method 
+        if temp is not None:
+            temp.value = value
+            return True
+        return False
+
 
 my_linked_list = LinkedList(2)
 my_linked_list.append(3)
