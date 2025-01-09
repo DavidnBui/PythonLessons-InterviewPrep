@@ -53,6 +53,17 @@ class LinkedList:
         self.length += 1
         return True
 
+    def pop_first(self):
+        if self.length == 0:
+            return None
+        temp = self.head                # Creates temporary Node 
+        self.head = self.head.next      # Moves head of the Node to the next one
+        temp.next = None                # Removes the previous head from the list
+        self.length -= 1
+        if self.length == 0:
+            self.tail = None
+        return temp
+
 
 my_linked_list = LinkedList(2)
 my_linked_list.append(3)
