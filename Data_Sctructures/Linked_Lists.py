@@ -79,8 +79,23 @@ class LinkedList:
             return True
         return False
 
+    def insert(self, index, value): 
+        if index < 0 or index > self.length:
+            return False
+        if index == 0:                  # Inserts new node at the begining 
+            return self.prepend(value)
+        if index == self.length:        # Inserts new node at the end
+            return self.append(value)
+        new_node = Node(value)
+        temp = self.get(index - 1)      # Do -1 because you want the one before it so it can point to next
+        new_node.next = temp.next       # Sets pointer to the node after the new node
+        temp.next = new_node            # Points temp arrow to new node 
+        self.length += 1 
+        return True
 
-my_linked_list = LinkedList(2)
-my_linked_list.append(3)
-my_linked_list.prepend(1)
+my_linked_list = LinkedList(0)
+my_linked_list.append(2)
+
+my_linked_list.insert(1,1)
+
 my_linked_list.print_list()
