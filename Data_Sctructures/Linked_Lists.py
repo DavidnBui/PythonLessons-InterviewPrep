@@ -107,11 +107,23 @@ class LinkedList:
         self.length -= 1 
         return temp
 
-my_linked_list = LinkedList(11)
-my_linked_list.append(3)
-my_linked_list.append(23)
-my_linked_list.append(27)
+    def reverse (self):                 # VERY COMMON INTERVIEW QUESTION
+        temp = self.head                # Line 111 --> Line 113 Reverses the head and tail
+        self.head = self.tail 
+        self.tail = temp
+        after = temp.next              
+        before = None
+        for _ in range(self.length):
+            after = temp.next           # Moves after varaible over one 
+            temp.next = before          # Makes temp variable flip and point to the item before
+            before = temp               # Moves before variable over one
+            temp = after                # Moves temp variable behind one
 
-print(my_linked_list.remove(2), '\n')
+my_linked_list = LinkedList(1)
+my_linked_list.append(2)
+my_linked_list.append(3)
+my_linked_list.append(4)
+
+my_linked_list.reverse()
 
 my_linked_list.print_list()
