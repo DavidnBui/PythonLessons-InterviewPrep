@@ -68,6 +68,19 @@ class DoublyLinkedList:
             temp.next = None 
         self.length -= 1 
         return temp
+    
+    def get(self, index):
+        if index < 0 or index >= self.length:
+            return None
+        temp = self.head
+        if index < self.length/2:
+            for _ in range (index):         
+                temp = temp.next            
+        else:
+            temp = self.tail
+            for _ in range (self.length -1, index, -1):
+                temp = temp.prev
+        return temp
 
 my_doubly_linked_list = DoublyLinkedList(2)
 my_doubly_linked_list.append(1)
