@@ -1,16 +1,6 @@
 # Popular interview Technical Questions
-class Node:                        
-    def __init__(self, value):
-        self.value = value
-        self.next = None
 
-class LinkedList:
-    def __init__(self, value):
-        new_node = Node(value)       
-        self.head = new_node        
-        self.tail = new_node        
-        self.length = 1  
-
+# How to reverse a linked list (Assume you created the node and linkedlist class)
     def reverse (self):                 # VERY COMMON INTERVIEW QUESTION
         temp = self.head                # Line 111 --> Line 113 Reverses the head and tail
         self.head = self.tail 
