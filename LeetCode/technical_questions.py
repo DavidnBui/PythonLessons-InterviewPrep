@@ -49,5 +49,5 @@
         for j in list2:
             if j in my_dict:
                 return True
-            
+        
         return False
