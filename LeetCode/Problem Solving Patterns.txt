@@ -1,11 +1,48 @@
 Problem Solving Patterns 
 
 Frequency Counter 
--Determine the number of occurrences of each unique element in a dataset.
--You would use this approach when you want to 
+🔹Determine the number of occurrences of each unique element in a dataset.
+🔹You would create a dictionary and then store the elements in that diciton that hold a value (number of times you see it in an array)
+🔹Used when dealing with 
     -Count the number of occurances 
     -When you want to avoid using nested for loops (increase time output)
     -Finding Duplicates 
     -Finding most/least frequent elements
+🔹 Example Problems:
+    ✅Two Sum (unsorted array)
+    ✅Anagram detection
+    ✅First non-repeating character
+    ✅Finding majority elements
 
+Two Pointers 
+🔹An efficient way to solve problems that involve searching, sorting, or comparing elements in an array or string. 
+🔹It uses two separate pointers (indexes) that move towards each other or in the same direction to optimize space and time complexity.
+🔹Anytime you see SORTED or find a pair it is usually two pointers 
+🔹Used when dealing with 
+    -Sorted arrays (e.g., searching for pairs).
+    -Modifying arrays in-place without extra space.
+    -Comparing elements from both ends.
+🔹Example Problems 
+    ✅Two sum (sorted array)
+    ✅Remove duplicates from a sorted array
+    ✅Valid palindrome
+    ✅Container with most water (max area)
+
+Sliding Window 
+🔹Is an optimization method used for problems that involve contiguous subarrays or substrings. 
+🔹Instead of recalculating values from scratch (which can be slow), we use a moving window to process elements efficiently.
+🔹Types of Sliding Window
+    -Fixed - Used when the window size is given explicitly.
+    -Variable - Used when the window size changes dynamically based on a condition.
+    -Dynamic - Used for problems related to strings and substrings.
+🔹Used when dealing with 
+    -Contiguous sequences (arrays/strings).
+    -Problems involving sums, averages, min/max values.
+    -Finding the longest/shortest subarray with a condition.
+🔹Example Problems 
+    ✅Maximum sum of a subarray of size K
+    ✅Longest substring without repeating characters
+    ✅Smallest subarray with a sum ≥ target
+
+LinkedLists
 
