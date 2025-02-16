@@ -1,0 +1,11 @@
+Problem Solving Patterns 
+
+Frequency Counter 
+-Determine the number of occurrences of each unique element in a dataset.
+-You would use this approach when you want to 
+    -Count the number of occurances 
+    -When you want to avoid using nested for loops (increase time output)
+    -Finding Duplicates 
+    -Finding most/least frequent elements
+
+
