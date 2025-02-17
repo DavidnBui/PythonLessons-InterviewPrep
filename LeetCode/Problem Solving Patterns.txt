@@ -45,4 +45,20 @@ Sliding Window
     ✅Smallest subarray with a sum ≥ target
 
 LinkedLists
+🔹Not as common to show up but still good to know 
+🔹Used when dealing with
+    -Pointer Manipulation
+        -Moving nodes, reversing a list, merging lists.
+    -Cycle Detection
+        -Finding loops using the Fast & Slow Pointers technique.
+    -Modifying a List In-Place
+        -Removing a node, finding the middle node, deleting duplicates.
+    -Recursive Solutions
+        -Reversing a list, flattening linked lists, deep copying.
+🔹Example Problems 
+    ✅Reverse a LinkedList
+    ✅Detect a Cycle
+    ✅Find the middle of a LinkedList
+    ✅Merge two sorted LinkedList
+    ✅Remove Nth Node from End of List
 
