@@ -66,3 +66,16 @@ class Solution:
                 nums[left] != val
                 left += 1
         return left
+
+# ITEM IN COMMON (INTERVIEW QUESTION)
+def item_in_common(list1, list2):   # REMEMBER TO DEFINE THE FUNCTIOn
+    count = {}                      # Creates a dictionary to hold the values 
+    
+    for num in list1:               # Loop through the values of list1
+        count[num] = True           # Store Numbers of List1 into dictionary 
+    
+    for num in list2:               # Loop through the values of list2
+        if num in count:            # If numbers in list 2 are in list 1 return true 
+            return True 
+            
+    return False
