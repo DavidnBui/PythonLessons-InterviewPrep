@@ -62,3 +62,19 @@ LinkedLists
     ✅Merge two sorted LinkedList
     ✅Remove Nth Node from End of List
 
+Hash Maps
+🔹Essentially a dictionary 
+🔹Allow for fast lookups, insertions, and deletions
+🔹UKEY WORDS WHEN USING HASH MAPS (lookups, counting, and tracking relationships.)
+🔹Kind of similar to frequency counter except instead of JUST counting the frequencies you can do MUCH more
+🔹Used when dealing with
+    -Finding Duplicates
+    -Check if an element exists
+    -Count occurance of elements
+🔹Example Problems 
+    ✅Two Sum
+    ✅First Non-Repeating Character
+    ✅Group Anagrams
+    ✅Longest Consecutive Sequence
+    ✅Find Duplicate Number
+
