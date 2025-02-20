@@ -79,3 +79,20 @@ def item_in_common(list1, list2):   # REMEMBER TO DEFINE THE FUNCTIOn
             return True 
             
     return False
+
+# FIND DUPLICATES (INTERVIEW QUESTION)
+def find_duplicates(nums):
+    count = {}                      # Going to hold the values of the array
+    duplicates = []                 # Going to hold duplicates value once we loop through the entire thing
+
+    for num in nums:                # Iterating through the literal list 
+        if num in count:
+            count[num] += 1         # Add 1 to the value if we have seen it already in count
+        else:
+            count[num] = 1          # Make value equal to 1 because it is the first instance we see it
+
+    for num, freq in count.items(): # Collect numbers that appear more than once
+        if freq > 1:
+            duplicates.append(num)
+
+    return duplicates
