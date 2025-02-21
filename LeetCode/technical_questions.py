@@ -109,3 +109,18 @@ def first_non_repeating_char(string):
             return char
             
     return None
+
+
+#Group Anagrams (INTERVIEW QUESTION)        # Given a series of strings, group them if they make an anagram of each other
+def group_anagrams(strings):
+    count_dict = {}
+
+    for word in strings:                      # Iterate through each word in the list
+        sorted_word = "".join(sorted(word))  # Sort characters alphabetically
+
+        if sorted_word not in count_dict:
+            count_dict[sorted_word] = []  # Initialize list if key is not present
+
+        count_dict[sorted_word].append(word)  # Append word to correct anagram group
+
+    return list(count_dict.values())  # Return grouped anagrams as lists
