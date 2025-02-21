@@ -67,7 +67,7 @@ class Solution:
                 left += 1
         return left
 
-# ITEM IN COMMON (INTERVIEW QUESTION)
+# ITEM IN COMMON (INTERVIEW QUESTION) # Given two lists of numbers find the number that is in both
 def item_in_common(list1, list2):   # REMEMBER TO DEFINE THE FUNCTIOn
     count = {}                      # Creates a dictionary to hold the values 
     
@@ -80,8 +80,8 @@ def item_in_common(list1, list2):   # REMEMBER TO DEFINE THE FUNCTIOn
             
     return False
 
-# FIND DUPLICATES (INTERVIEW QUESTION)
-def find_duplicates(nums):
+# FIND DUPLICATES (INTERVIEW QUESTION)  # Given an array of numbers find the numbers that have duplicates in it 
+def find_duplicates(nums):          
     count = {}                      # Going to hold the values of the array
     duplicates = []                 # Going to hold duplicates value once we loop through the entire thing
 
@@ -96,3 +96,16 @@ def find_duplicates(nums):
             duplicates.append(num)
 
     return duplicates
+
+#First Non-Repeating Characters (INTERVIEW QUESTION)   # given a string, return the first letter that does not repeat
+def first_non_repeating_char(string):
+    dict = {}                                   # hold the information given to us 
+    
+    for char in string:                         # loop through the string that is given to us and stores in "dict"
+        dict[char] = dict.get(char, 0) + 1      # Checks if the character is in dict, if not assign it a value of 1. If it is increment it 
+        
+    for char in string:                         #Loops through the string again 
+        if dict[char] == 1:                     # Finds the first character that holds the value of 1 
+            return char
+            
+    return None
