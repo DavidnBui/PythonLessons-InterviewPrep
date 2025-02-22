@@ -124,3 +124,20 @@ def group_anagrams(strings):
         count_dict[sorted_word].append(word)  # Append word to correct anagram group
 
     return list(count_dict.values())  # Return grouped anagrams as lists
+
+# Subarray_sum (INTERVIEW QUESTION)     # Given an array of numbers find a contiguous sequence that adds up to the target
+def subarray_sum(nums, target):         #SLIDING WINDOW APPROACH
+    left = 0                            # Create a pointer at the index of 0
+    current_sum = 0                     # Keeps track of the current sum of the window
+
+    for right in range(len(nums)):      # Moves the right pointer through the array
+        current_sum += nums[right]      # Adds the element to the window 
+    
+        while current_sum > target and left <= right:   # Our condition 
+            current_sum -= nums[left]                   # Remove leftmost value
+            left += 1                                   # Move left pointer forward
+
+        if current_sum == target:       # If sum equals target, return indices
+            return [left, right]
+
+    return []
