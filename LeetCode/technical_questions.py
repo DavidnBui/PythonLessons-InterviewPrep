@@ -150,3 +150,15 @@ def remove_duplicates(my_list):             #It works but it is not time effecie
 def has_unique_chars(string):
     return len(set(string)) == len(string)  # set(string), converts the string into a set. Which then gets rid of the duplicates automatically 
                                             # It then compares the set to the length of the string, If it is the same length then it returns true(they were all unique) & vice versa
+
+# Find Pairs (Interview Question)           # Given two array of numbers, find pairs that equal to the target value
+def find_pairs(arr1, arr2, target):
+    arr2_set = set(arr2)                    # We convert arr2 to a set because checking if a number exists in a set is much faster than checking in a list.
+    pairs = []                              # Create this to hold the pairs
+
+    for num in arr1:                        #Loop through the first array
+        complement = target - num           #Target minus a number to find if its in arr2_set
+        if complement in arr2_set:          # Searching in a set (O(1) time)
+            pairs.append((num, complement)) # Place the complement and num in pairs dict
+
+    return pairs
