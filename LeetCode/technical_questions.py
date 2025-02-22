@@ -141,3 +141,12 @@ def subarray_sum(nums, target):         #SLIDING WINDOW APPROACH
             return [left, right]
 
     return []
+
+# Remove Duplicates (INTERVIEW QUESTION)    #Initial though was to use frequency counter 
+def remove_duplicates(my_list):             #It works but it is not time effecient 
+    return list(set(my_list))               #Instead use a set because it automactically gets rid of duplicates
+
+# Has Unique Chars (Interview Question)
+def has_unique_chars(string):
+    return len(set(string)) == len(string)  # set(string), converts the string into a set. Which then gets rid of the duplicates automatically 
+                                            # It then compares the set to the length of the string, If it is the same length then it returns true(they were all unique) & vice versa
