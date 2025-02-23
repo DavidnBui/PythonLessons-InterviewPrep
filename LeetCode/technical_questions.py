@@ -162,3 +162,19 @@ def find_pairs(arr1, arr2, target):
             pairs.append((num, complement)) # Place the complement and num in pairs dict
 
     return pairs
+
+# Find Kth node from the end (Interview Question)   # remove the node given to us starting at the end of the linked list *DO THIS WITHOUT USING LENGTH*
+def find_kth_from_end(ll, k):
+        slow = fast = ll.head                       # 11 is the linked list, and we are setting both pointers at the head of the linkedlist 
+        for _ in range(k):                          # Loops through the linked list
+            if fast is None:                        # If the fast pointer is pointing at a variable larger than K (target) return none
+                return None
+            fast = fast.next                        # Advances the fast pointer forward
+ 
+        while fast:                                 # Moves the fast and slow pointer throughout the entire linkedlist until fast reaches the end
+            slow = slow.next                        # EXPLAINATION: So we move the fast pointer to K (target), then move the slow pointer accordingly, until fast reaches nothing 
+            fast = fast.next
+        
+        return slow
+
+# 
