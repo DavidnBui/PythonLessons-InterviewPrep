@@ -3,30 +3,30 @@ Problem Solving Patterns
 Frequency Counter 
 🔹Determine the number of occurrences of each unique element in a dataset.
 🔹You would create a dictionary and then store the elements in that diciton that hold a value (number of times you see it in an array)
-🔹Used when dealing with 
+💡Used when dealing with 
     -Count the number of occurances 
     -When you want to avoid using nested for loops (increase time output)
     -Finding Duplicates 
     -Finding most/least frequent elements
 🔹 Example Problems:
-    ✅Two Sum (unsorted array)
-    ✅Anagram detection
-    ✅First non-repeating character
-    ✅Finding majority elements
+    📌Two Sum (unsorted array)
+    📌Anagram detection
+    📌First non-repeating character
+    📌Finding majority elements
 
 Two Pointers 
 🔹An efficient way to solve problems that involve searching, sorting, or comparing elements in an array or string. 
 🔹It uses two separate pointers (indexes) that move towards each other or in the same direction to optimize space and time complexity.
 🔹Anytime you see SORTED or find a pair it is usually two pointers 
-🔹Used when dealing with 
+💡Used when dealing with 
     -Sorted arrays (e.g., searching for pairs).
     -Modifying arrays in-place without extra space.
     -Comparing elements from both ends.
 🔹Example Problems 
-    ✅Two sum (sorted array)
-    ✅Remove duplicates from a sorted array
-    ✅Valid palindrome
-    ✅Container with most water (max area)
+    📌Two sum (sorted array)
+    📌Remove duplicates from a sorted array
+    📌Valid palindrome
+    📌Container with most water (max area)
 
 Sliding Window 
 🔹Is an optimization method used for problems that involve contiguous subarrays or substrings. 
@@ -35,18 +35,18 @@ Sliding Window
     -Fixed - Used when the window size is given explicitly.
     -Variable - Used when the window size changes dynamically based on a condition.
     -Dynamic - Used for problems related to strings and substrings.
-🔹Used when dealing with 
+💡Used when dealing with 
     -Contiguous sequences (arrays/strings).
     -Problems involving sums, averages, min/max values.
     -Finding the longest/shortest subarray with a condition.
 🔹Example Problems 
-    ✅Maximum sum of a subarray of size K
-    ✅Longest substring without repeating characters
-    ✅Smallest subarray with a sum ≥ target
+    📌Maximum sum of a subarray of size K
+    📌Longest substring without repeating characters
+    📌Smallest subarray with a sum ≥ target
 
 LinkedLists
 🔹Not as common to show up but still good to know 
-🔹Used when dealing with
+💡Used when dealing with
     -Pointer Manipulation
         -Moving nodes, reversing a list, merging lists.
     -Cycle Detection
@@ -56,25 +56,37 @@ LinkedLists
     -Recursive Solutions
         -Reversing a list, flattening linked lists, deep copying.
 🔹Example Problems 
-    ✅Reverse a LinkedList
-    ✅Detect a Cycle
-    ✅Find the middle of a LinkedList
-    ✅Merge two sorted LinkedList
-    ✅Remove Nth Node from End of List
+    📌Reverse a LinkedList
+    📌Detect a Cycle
+    📌Find the middle of a LinkedList
+    📌Merge two sorted LinkedList
+    📌Remove Nth Node from End of List
 
 Hash Maps
 🔹Essentially a dictionary 
 🔹Allow for fast lookups, insertions, and deletions
 🔹UKEY WORDS WHEN USING HASH MAPS (lookups, counting, and tracking relationships.)
 🔹Kind of similar to frequency counter except instead of JUST counting the frequencies you can do MUCH more
-🔹Used when dealing with
+💡Used when dealing with
     -Finding Duplicates
     -Check if an element exists
     -Count occurance of elements
 🔹Example Problems 
-    ✅Two Sum
-    ✅First Non-Repeating Character
-    ✅Group Anagrams
-    ✅Longest Consecutive Sequence
-    ✅Find Duplicate Number
+    📌Two Sum
+    📌First Non-Repeating Character
+    📌Group Anagrams
+    📌Longest Consecutive Sequence
+    📌Find Duplicate Number
 
+Binary Search
+🔹Algorithm that helps in finding an element in a sorted array
+🔹Instead of searching every element it cuts its time in half 
+🔹If I say to pick a number between 1-10 and u guess 5 I would say higher or lower. You would then know what numbers to exclude
+💡Used when dealing with
+    -Anything sorted array related
+🔹Example Problems
+    📌Classic Binary Search (Find an Element in a Sorted Array)
+    📌Find First and Last Occurrence of an Element
+    📌Search in a Rotated Sorted Array
+    📌Find Peak Element
+    📌Search in an Infinite Sorted Array
