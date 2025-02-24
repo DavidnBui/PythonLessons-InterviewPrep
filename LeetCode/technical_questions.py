@@ -187,3 +187,14 @@ def findLHS(self, nums: List[int]) -> int:
             current_length = count_dict[num] + count_dict[num + 1]    #If the above statement is true it will store it in current_length 
             max_length = max(max_length, current_length)              #This will store the current_length into max_length
         return max_length
+    
+# Maximum average subarray I                            # Given an array of numbers and a variable size K, find the maximum average of K 
+def findMaxAverage(self, nums: List[int], k: int) -> float:
+    max_sum = sum(nums[:k])                             # Finds the sum of the first K elements
+    window_sum = max_sum                                # Track current sum of window
+
+    for i in in range(k, len(nums)):                    # Slide the window
+        window_sum += nums[i] - nums[i - k]             # is going to move the window along (remove the first element and add a new element to the end)
+        max_sum = max(max_sum, window_sum)              # Updates for the maximum sum found so far
+    
+    return max_sum/k                                    # Return the avg
