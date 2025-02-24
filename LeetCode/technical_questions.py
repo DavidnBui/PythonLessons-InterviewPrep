@@ -177,4 +177,13 @@ def find_kth_from_end(ll, k):
         
         return slow
 
-# 
+#  Longest Harmonious Subsequence (FREQUENCY COUNTER)   # Given an array, find where the difference is 1 among the harmonious sub-sequence 
+def findLHS(self, nums: List[int]) -> int:
+    count_dict = Counter(nums)                          # Store the numbers and count how many numbers are in the array 
+    max_length = 0                                      # Keep track of how many harmonious subsequences there are 
+
+    for num in count_dict:                              # Loop through the entire array 
+        if num + 1 in count_dict:                       # Its going to check if the number after it exists (if 1 is the first number it will check if 2 is in the dict)
+            current_length = count_dict[num] + count_dict[num + 1]    #If the above statement is true it will store it in current_length 
+            max_length = max(max_length, current_length)              #This will store the current_length into max_length
+        return max_length
