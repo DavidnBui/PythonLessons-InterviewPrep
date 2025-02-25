@@ -203,3 +203,16 @@ def findMaxAverage(self, nums: List[int], k: int) -> float:
 def deleteNode(self, node):
         node.val = node.next.val                        # Set the nodes value that you want to replace to the next nodes value
         node.next = node.next.next                      # you are going to skip over that node that you replace the value with
+
+# How to reverse a linkedlist                           # Given a linkedlist reverse it so that the first node is the last and vice versa
+def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        prev = None 
+        curr = head
+
+        while curr:
+            next_node = curr.next
+            curr.next = prev  
+            prev = curr  
+            curr = next_node
+        
+        return prev
