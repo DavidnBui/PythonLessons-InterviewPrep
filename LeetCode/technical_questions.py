@@ -216,3 +216,32 @@ def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
             curr = next_node
         
         return prev
+
+#Palindrome linked list 
+def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        if not head or not head.next:
+            return True  # Empty list or single node is always a palindrome
+        
+        # Step 1: Find the middle using slow and fast pointers
+        slow, fast = head, head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+        # Step 2: Reverse the second half of the linked list
+        prev, curr = None, slow
+        while curr:
+            next_node = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next_node
+
+        # Step 3: Compare both halves
+        left, right = head, prev  # Start from the beginning and reversed second half
+        while right:  # Compare until the end of the second half
+            if left.val != right.val:
+                return False
+            left = left.next
+            right = right.next
+
+        return True 
