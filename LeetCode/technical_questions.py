@@ -198,3 +198,8 @@ def findMaxAverage(self, nums: List[int], k: int) -> float:
         max_sum = max(max_sum, window_sum)              # Updates for the maximum sum found so far
     
     return max_sum/k                                    # Return the avg
+
+# Deleting a node from a linked list                    # Given an singly linkedlist remove a node without having access to the head or the prev node and you cannot delete the last node
+def deleteNode(self, node):
+        node.val = node.next.val                        # Set the nodes value that you want to replace to the next nodes value
+        node.next = node.next.next                      # you are going to skip over that node that you replace the value with
