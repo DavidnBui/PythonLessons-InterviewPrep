@@ -245,3 +245,22 @@ def isPalindrome(self, head: Optional[ListNode]) -> bool:
             right = right.next
 
         return True 
+
+# Merge two sorted lists                              # Given two linked list, merge them so that they are in numerical order 
+def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = ListNode(0)                             # Creates a dummy node at the begining of the linkedlist
+        tail = dummy                                    # sets tail to dummy
+
+        while list1 and list2:                          # Traverse both lists
+            if list1.val < list2.val:                   # If node in list 1 is less than node in list 2 
+                tail.next = list1                       # Append list1 node
+                list1 = list1.next                      # Move list1 pointer
+            else:
+                tail.next = list2                       # Append list2 node
+                list2 = list2.next                      # Move list2 pointer
+            
+            tail = tail.next                            # Move tail pointer forward
+
+        tail.next = list1 if list1 else list2           # If any elements remain in list1 or list2, append them
+
+        return dummy.next                               # Return merged list (skip dummy node)
