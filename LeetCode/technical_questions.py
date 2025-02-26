@@ -264,3 +264,21 @@ def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) ->
         tail.next = list1 if list1 else list2           # If any elements remain in list1 or list2, append them
 
         return dummy.next                               # Return merged list (skip dummy node)
+
+# Remove Nth node from the end of a linked list         # Given a linked list remove the N from a linkedlist starting from the end 
+def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+    dummy = ListNode(0, head)                           # This creates a dummy node placing it before the first node 
+    left = dummy                                        # Sets the left and right pointer at dummy 
+    right = dummy 
+
+    for _ in range (n + 1):                             # Moves right pointer one over, so there is a gap between left and right
+        right = right.next 
+
+    while right:                                        # Traverses the list until right reaches the end 
+        left = left.next 
+        right = right.next 
+        
+    if left.next:                                       # Checks if there is a node after the left pointer, and then removes it
+        left.next = left.next.next 
+
+    return dummy.next
