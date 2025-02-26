@@ -282,3 +282,17 @@ def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNod
         left.next = left.next.next 
 
     return dummy.next
+
+# Link Lists Cycle                                      # Given a linked lists, determine if its a cycle 
+def hasCycle(self, head: Optional[ListNode]) -> bool:
+    slow = head                                         # Set a slow and fast pointer to head 
+    fast = head 
+
+    while fast and fast.next:                           # Moves the fast pointer two steps ahead of slow 
+        slow = slow.next 
+        fast = fast.next.next 
+
+        if slow == fast:                                # If fast catches up to slow then its a cycle
+            return True 
+
+    return False 
