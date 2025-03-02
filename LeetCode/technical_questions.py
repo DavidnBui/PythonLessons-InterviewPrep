@@ -283,6 +283,20 @@ def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNod
 
         return dummy.next
 
+# Linked List Cycle 
+def hasCycle(self, head: Optional[ListNode]) -> bool:
+        slow = head 
+        fast = head 
+
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+            if slow == fast:
+                return True
+
+        return False 
+
 # First and Last position of element in sorted array 
 def binary_search(nums, target, is_searching_left):
             left = 0
