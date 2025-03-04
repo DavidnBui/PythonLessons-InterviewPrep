@@ -321,3 +321,18 @@ def binary_search(nums, target, is_searching_left):
         
         left = binary_search(nums, target, True)
         right = binary_search(nums, target, False)
+
+# Find Minimum in Rotated Sorted Array
+def findMin(self, nums: List[int]) -> int:
+        left, right = 0, len(nums) - 1
+    
+        while left < right:
+            mid = left + (right - left) // 2
+        
+        # If mid element is greater than right element, search in right half
+            if nums[mid] > nums[right]:
+                left = mid + 1
+            else:
+                right = mid  # Search in the left half
+            
+        return nums[left]
