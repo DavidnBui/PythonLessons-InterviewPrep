@@ -396,3 +396,20 @@ def fizzBuzz(self, n: int) -> List[str]:
             else:
                 result.append(str(i))
         return result
+
+# Pascals Triangle 
+def generate(self, numRows: int) -> List[List[int]]:
+        pascal = [[1]]  # First row is always [1]
+        
+        for i in range(1, numRows):
+            prev_row = pascal[-1]  # Get the previous row
+            new_row = [1]  # First element is always 1
+            
+            # Compute middle elements
+            for j in range(1, len(prev_row)):
+                new_row.append(prev_row[j - 1] + prev_row[j])
+            
+            new_row.append(1)  # Last element is always 1
+            pascal.append(new_row)  # Add new row to Pascal's Triangle
+        
+        return pascal
