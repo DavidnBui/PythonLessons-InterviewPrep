@@ -90,3 +90,18 @@ Binary Search
     📌Search in a Rotated Sorted Array
     📌Find Peak Element
     📌Search in an Infinite Sorted Array
+
+Dynamic Programming 
+🔹Optimization Technique used for solving problems by breaking them into overlapping subproblems and storing results to avoid redundant calculations.
+🔹Uses recursion + memoization (top-down) or tabulation (bottom-up).
+🔹Best suited for problems with optimal substructure and overlapping subproblems.
+💡Used when dealing with
+    -Memoization (Top-Down)
+    -Tabulation (Bottom-Up)
+    -Optimal Substructure
+    -Overlapping Subproblems
+🔹Example Problems
+    📌1D DP (Simple Array-Based Problems)
+    📌2D DP (Grid-Based Problems)
+    📌Knapsack Type Problems
+    📌String DP
